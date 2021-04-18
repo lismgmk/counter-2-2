@@ -1,0 +1,25 @@
+
+.buttonInc{
+  margin: 10px;
+  height: 20px;
+  background-color: darkgray;
+  border: 3px solid yellow;
+  border-radius: 5px;
+  width: 55px;
+  height: 26px;
+  color: yellow;
+  text-align: center;
+  padding: 5px;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+
+.disable{
+  background-color: rgba(117, 190, 218, 0.5);
+  color: rgba(0,0,255, 0.1);
+  border: 3px solid rgba(255,255,0, 0.5);
+  pointer-events: none
+}
+
