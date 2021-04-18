@@ -11,27 +11,17 @@ export type DisplayCounterType = {
     errorNumber: boolean
     disableReset: boolean
     disableInc: boolean
+    checkErrorCounter: () => void
 }
 
 export function DisplayCounter2 (props : DisplayCounterType ) {
 
-    const checkErrorCounter = () => {
-        switch (props.errorCounter) {
-            case 'good':
-                return <div className={`${s.displayCounter} ${props.errorNumber ? s.error : ''}`}>{props.valueFunc()}</div>
-            case 'incorrectValue':
-                return <div className={`${s.displayCounter}`}>Incorrect Value</div>
-            case 'pressSet':
-                return <div className={`${s.displayCounter}`}>pres button Set</div>
-            default:
-                return console.log('error')
-        }
-    }
+
 
   return (
       <div className={s.container}>
 
-          {checkErrorCounter()}
+          {props.checkErrorCounter()}
           <div className={s.buttonsBlock}>
 
               <ButtonForEach

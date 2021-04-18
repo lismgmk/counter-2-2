@@ -16,7 +16,8 @@ export function Select(props: SelectType) {
     }
 
     return (
-        <div>
+        <div className={s.inputContainer}>
+            <div className={s.titleName}>{props.classNameSelect}</div>
             <input
 
                 className={` ${props.classNameSelect} ${s.inputStyle} ${props.errorSetting ? s.error : ''}`}

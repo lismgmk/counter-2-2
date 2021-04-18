@@ -9,8 +9,14 @@
   color: yellow;
   text-align: center;
 }
-
-
+input{
+  width: 50px;
+}
+.inputContainer{
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
 
 .buttonIncdisabled{
   background-color: rgba(117, 190, 218, 0.5);
@@ -20,4 +26,10 @@
 
 .error{
   background-color: red;
+}
+
+.titleName{
+  color: black;
+  font-size: medium;
+  font-weight: bold;
 }

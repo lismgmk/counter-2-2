@@ -34,14 +34,6 @@ body{
   border-radius: 6px;
 }
 
-/*.sectionSettingBlock{*/
-/*  display: flex;*/
-/*  align-items: center;*/
-/*  flex-direction: column;*/
-/*  justify-content: space-between;*/
-/*  height: 240px;*/
-/*}*/
-
 .error{
   color: red;
 }
@@ -60,4 +52,11 @@ body{
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+
+.displayCounterText {
+  width: 150px;
+  font-weight: bold;
+  color: red;
+  font-size: large;
 }

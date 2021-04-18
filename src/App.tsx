@@ -63,6 +63,7 @@ debugger
     const onClickButtonRes = () => {
         setDisableComponent(false)
         setDisableInc(false)
+        setErrorCounter('pressSet')
     }
 
     const valueFunc = () => {
@@ -115,7 +116,7 @@ debugger
             setDisableSet(false)
         }
         else{
-            setErrorCounter('good')
+
             setErrorSetting1(false)
             setDisableSet(false)
         }
@@ -142,9 +143,22 @@ debugger
             setErrorSetting1(false)
         }
         else{
-            setErrorCounter('good')
+
             setDisableSet(false)
             setErrorSetting2(false)
+        }
+    }
+
+    const checkErrorCounter = () => {
+        switch (errorCounter) {
+            case 'good':
+                return <div className={`${s.displayCounter} ${errorNumber ? s.error : ''}`}>{valueFunc()}</div>
+            case 'incorrectValue':
+                return <div className={`${s.displayCounterText}`}>Incorrect Value</div>
+            case 'pressSet':
+                return <div className={`${s.displayCounterText}`}>pres button Set</div>
+            default:
+                return console.log('error')
         }
     }
 
@@ -153,6 +167,7 @@ debugger
 
             {disableComponent ?
                 <DisplayCounter2
+                    checkErrorCounter={checkErrorCounter}
                     onClickButtonRes = {onClickButtonRes}
                     onClickButtonInc={onClickButtonInc}
                     onClickButtonReset={onClickButtonReset}
@@ -165,6 +180,7 @@ debugger
             :
 
                 <SettingCounter
+                    checkErrorCounter={checkErrorCounter}
                 classNameSelectMax={classNameSelectMax}
                 classNameSelectMin={classNameSelectMin}
                 onChangeSelect1={onChangeSelect1}

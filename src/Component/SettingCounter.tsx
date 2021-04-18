@@ -15,7 +15,7 @@ export type SettingCounterType = {
     onChangeSelect2: (value: number) => void
     classNameSelectMax: string
     classNameSelectMin: string
-
+    checkErrorCounter: () => void
 }
 
 
@@ -26,7 +26,7 @@ export function SettingCounter (props : SettingCounterType ) {
 
   return (
       <div className={s.container}>
-
+          {props.checkErrorCounter()}
               <div className={`${s.buttonsBlock} ${s.buttonsBlockSelect}`}>
                   <Select
                       onChangeSelect = {props.onChangeSelect1}
